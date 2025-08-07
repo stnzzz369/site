@@ -1,42 +1,87 @@
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
 body {
-    background-color: #000;
-    color: #00ff00;
-    font-family: 'Share Tech Mono', monospace;
-    margin: 0;
-    padding: 0;
+  background-color: #000;
+  color: #00ff00;
+  font-family: 'Share Tech Mono', monospace;
+  margin: 0;
+  padding: 0;
 }
 
 .terminal {
-    padding: 2rem;
-    max-width: 900px;
-    margin: 60px auto;
-    border: 2px solid #00ff00;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.8);
+  padding: 2rem;
+  max-width: 900px;
+  margin: 60px auto;
+  border: 2px solid #00ff00;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 90%;
+  box-sizing: border-box;
 }
 
 .terminal-header {
-    border-bottom: 1px solid #00ff00;
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
+  border-bottom: 1px solid #00ff00;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  word-wrap: break-word;
 }
 
 .terminal-title {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .terminal-body ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding-left: 1rem;
 }
 
 .terminal-body a {
-    color: #00ff00;
-    text-decoration: none;
+  color: #00ff00;
+  text-decoration: none;
 }
 
 .terminal-body a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
+}
+
+/* 🌐 Responsive Styles */
+@media screen and (max-width: 768px) {
+  .terminal {
+    margin: 20px auto;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  body {
+    background-attachment: scroll;
+  }
+
+  .terminal-body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    word-wrap: break-word;
+  }
+
+  ul {
+    padding-left: 1rem;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .terminal {
+    padding: 1rem 0.75rem;
+    border-width: 1px;
+  }
+
+  .terminal-title {
+    font-size: 0.9rem;
+  }
 }
